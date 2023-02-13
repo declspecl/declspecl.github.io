@@ -1,0 +1,35 @@
+.about
+{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.about_all
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about_pairs
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#about
+{
+    text-align: center;
+    color: #d0d0d0;
+    font-size: 3rem;
+    margin: 1rem 0 1rem 0;
+}
+
+@media only screen and (max-width: 850px)
+{
+    .about_pairs
+    {
+        flex-direction: column;
+    }
+}
