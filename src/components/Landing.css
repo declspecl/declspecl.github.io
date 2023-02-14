@@ -9,7 +9,6 @@
 .landing_info
 {
     position: relative;
-    width: 100%;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
@@ -18,6 +17,9 @@
 .landing_info h1
 {
     font-size: 2rem;
+    position: relative;
+    opacity: 0;
+    animation: 0.5s ease-in 0.5s forwards zoom_in;
 }
 
 .landing_info h1 span
@@ -28,10 +30,36 @@
 .landing_info h2
 {
     font-size: 2rem;
+    opacity: 0;
+    animation: 0.5s ease-in-out 1.75s forwards zoom_in;
 }
 
 .landing_info h2 span
 {
     color: #be97ff;
     text-decoration: underline;
+}
+
+@keyframes zoom_in
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-0.25%);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@media (prefers-reduced-motion)
+{
+    .landing_info h1, .landing_info h2
+    {
+        opacity: 1;
+        animation: none;
+    }
 }

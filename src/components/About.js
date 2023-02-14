@@ -6,7 +6,7 @@ const About = () =>
 {
     return (
         <section className="about">
-            <h1 id="about">About</h1>
+            <h1 className="about_title" id="about">About</h1>
             <div className="about_all">
                 <div className="about_pairs">
                     <InfoCard
@@ -41,9 +41,9 @@ const About = () =>
                         src="assets/clipboard.png"
                         alt="clipboard icon"
                         title="Goals"
-                        description="I want to live a rather simple life: become a software engineer, spending each day
-                        doing what I love, and become financially comfortable. I want to be able to support my family and
-                        friends whenever I can."
+                        description="My goals currently are to finish the school year strong and attempt to achieve an
+                        internship over the summer. I am itching to gather real world experience in the computer science
+                        field and am putting a lot of effort in trying to make that a reality."
                         title_color="#77dd77"
                     />
                 </div>

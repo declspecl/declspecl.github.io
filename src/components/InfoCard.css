@@ -5,7 +5,8 @@
     flex-direction: row;
     align-items: flex-start;
 
-    width: 45vw;
+    width: 40vw;
+    min-height: 225px;
 
     background-color: #111111;
     border: 1px solid #d0d0d0;
@@ -53,7 +54,7 @@
 
     word-wrap: break-word;
 
-    max-width: calc(45vw - 165px);
+    max-width: calc(40vw - 165px);
     width: 100%;
 }
 
@@ -71,14 +72,22 @@
 {
     padding: 5px;
 
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
-@media only screen and (max-width: 850px)
+@media only screen and (max-width: 600px)
+{
+    .infocard_description
+    {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1000px)
 {
     .infocard
     {
-        width: 80vw;
+        width: 90vw;
     }
 
     .infocard_title
@@ -88,11 +97,6 @@
 
     .infocard_text
     {
-        max-width: 80vw;
-    }
-
-    .infocard_description
-    {
-        font-size: 1rem;
+        max-width: 90vw;
     }
 }

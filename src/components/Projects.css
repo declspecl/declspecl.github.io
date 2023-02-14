@@ -1,52 +1,52 @@
-.about
+.projects
 {
-    font-family: 'Quicksand', sans-serif;
+    min-height: 500px;
 }
 
-.about_title
+.projects_title
 {
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
     color: #d0d0d0;
     font-size: 3rem;
     margin: 2rem 0 2rem 0;
 }
 
-.about_all
+.projects_cards_all
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
 }
 
-.about_pairs
+.projects_card_rows
 {
-    width: 82%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
 }
 
-.about_pairs:not(:last-child)
+.projects_card_rows:not(:last-child)
 {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1000px)
 {
-    .about_pairs
+    .projects_card_rows
     {
         flex-direction: column;
-        width: 90%;
     }
 
-    .about_pairs:not(:last-child)
+    .projects_card_rows:not(:last-child)
     {
         margin-bottom: 10px;
     }
 
-    .about_pairs > div:not(:last-child)
+    .project_container:not(:last-child)
     {
         margin-bottom: 10px;
     }

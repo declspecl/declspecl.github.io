@@ -33,7 +33,7 @@ class Canvas extends React.Component
         const canvas = document.getElementById("bg_canvas");
         const ctx = canvas.getContext('2d');
 
-        const dot_count = 100;
+        const dot_count = 125;
 
         // set all initial dots on the canvas
         for (let i = 0; i < dot_count; i++)
