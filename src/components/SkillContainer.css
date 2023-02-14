@@ -1,0 +1,56 @@
+.skill_group
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262626;
+}
+
+.skill_group_title
+{
+    color: #d0d0d0;
+    font-size: 4rem;
+    font-family: 'Quicksand', sans-serif;
+    width: 40%;
+    text-align: center;
+}
+
+.skil_group_icon_group
+{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    padding: 15px 15px 15px 0;
+}
+
+.skil_group_icon_group .skill_container:not(:last-child)
+{
+    padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 700px)
+{
+    .skill_group
+    {
+        flex-direction: column !important;
+    }
+
+    .skill_group_title
+    {
+        font-size: 3rem;
+    }
+
+    /* .skill_group_title
+    {
+        margin-bottom: 10px;
+    } */
+
+    .skil_group_icon_group
+    {
+        width: 90%;
+    }
+}
