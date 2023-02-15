@@ -1,0 +1,19 @@
+.skills
+{
+    padding: 5px 0 30px 0;
+    background-color: #191919;
+}
+
+.skills_title
+{
+    text-align: center;
+    color: #d0d0d0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.skills .skill_group:not(:last-child)
+{
+    margin-bottom: 30px;
+}

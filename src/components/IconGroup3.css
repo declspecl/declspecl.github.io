@@ -10,5 +10,6 @@
     aspect-ratio: 1 / 1;
     flex-grow: 1;
     width: 0;
-    max-width: 32%;
+    max-width: 33.33%;
+    transform: scale(65%);
 }

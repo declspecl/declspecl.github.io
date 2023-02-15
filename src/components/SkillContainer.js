@@ -4,11 +4,11 @@ import IconGroup3 from './IconGroup3';
 
 import './SkillContainer.css'
 
-const SkillContainer = ({direction, children}) =>
+const SkillContainer = ({direction, skill_title, children}) =>
 {
     return (
-        <div className="skill_group" style={{"flex-direction" : direction}}>
-            <h1 className="skill_group_title">Test</h1>
+        <div className="skill_group" style={{"flexDirection" : direction}}>
+            <h1 className="skill_group_title">{skill_title}</h1>
             <div className="skil_group_icon_group">{children}</div>
         </div>
     );

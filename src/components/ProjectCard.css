@@ -2,7 +2,7 @@
 {
     position: relative;
     width: 45vw;
-    height: 300px;
+    height: 325px;
 
     overflow: hidden;
 
@@ -134,6 +134,7 @@
     .project_container
     {
         width: 80vw;
+        height: 400px;
     }
 
     .project_description

@@ -4,13 +4,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #262626;
 }
 
 .skill_group_title
 {
-    color: #d0d0d0;
-    font-size: 4rem;
+    color: #fac898;
+    font-size: 3.5rem;
     font-family: 'Quicksand', sans-serif;
     width: 40%;
     text-align: center;
@@ -24,12 +23,14 @@
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    padding: 15px 15px 15px 0;
 }
 
-.skil_group_icon_group .skill_container:not(:last-child)
+@media only screen and (max-width: 1000px)
 {
-    padding-bottom: 15px;
+    .skill_group_title
+    {
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (max-width: 700px)
@@ -41,7 +42,7 @@
 
     .skill_group_title
     {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     /* .skill_group_title

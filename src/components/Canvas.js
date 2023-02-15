@@ -20,14 +20,73 @@ class Canvas extends React.Component
 
     componentDidUpdate(prevProps, prevState)
     {
-        console.log("component updated");
+        const canvas = document.getElementById("bg_canvas");
+        const ctx = canvas.getContext('2d');
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const dot_count = 125;
+
+        for (let i = 0; i < dot_count; i++)
+        {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+
+            const radius = (Math.random() * 1.5) + 1;
+
+            const velocityX = (Math.random() * 0.75) - 0.5;
+            const velocityY = (Math.random() * 0.75) - 0.5;
+
+            const fill_num = Math.random();
+
+            let fill = "";
+
+            if (fill_num <= 0.1)
+            {
+                fill = "#be97ff";
+            }
+            else if (fill_num <= 0.2)
+            {
+                fill = "#ff8dae";
+            }
+            else if (fill_num <= 0.3)
+            {
+                fill = "#fac898";
+            }
+            else
+            {
+                fill = "#d0d0d0";
+            }
+
+            this.state.dots.push({x, y, radius, velocityX, velocityY, fill});
+        }
     }
 
     componentDidMount()
     {
         window.addEventListener("resize", () =>
         {
-            this.forceUpdate();
+            this.setState({ dots: [] });
+        });
+        
+        // enable link smooth scrolling
+
+        const links = document.querySelectorAll('a[href*="#"]');
+        
+        links.forEach(link =>
+        {
+            if (link.hash !== '' && link.hash !== '#')
+            {
+                link.addEventListener('click', function(event)
+                {
+                    event.preventDefault();
+                    
+                    document.querySelector(link.hash).scrollIntoView(
+                    {
+                        behavior: 'smooth'
+                    });
+                });
+            }
         });
 
         const canvas = document.getElementById("bg_canvas");
