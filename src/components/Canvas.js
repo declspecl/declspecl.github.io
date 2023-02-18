@@ -18,7 +18,7 @@ class Canvas extends React.Component
         );
     }
 
-    componentDidUpdate(prevProps, prevState)
+    initCanvas()
     {
         const canvas = document.getElementById("bg_canvas");
         const ctx = canvas.getContext('2d');
@@ -41,15 +41,15 @@ class Canvas extends React.Component
 
             let fill = "";
 
-            if (fill_num <= 0.1)
+            if (fill_num <= 0.125)
             {
                 fill = "#be97ff";
             }
-            else if (fill_num <= 0.2)
+            else if (fill_num <= 0.25)
             {
                 fill = "#ff8dae";
             }
-            else if (fill_num <= 0.3)
+            else if (fill_num <= 0.375)
             {
                 fill = "#fac898";
             }
@@ -60,6 +60,11 @@ class Canvas extends React.Component
 
             this.state.dots.push({x, y, radius, velocityX, velocityY, fill});
         }
+    }
+
+    componentDidUpdate(prevProps, prevState)
+    {
+        
     }
 
     componentDidMount()

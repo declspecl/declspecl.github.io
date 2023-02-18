@@ -7,6 +7,7 @@ const About = () =>
     return (
         <section className="about">
             <h1 className="about_title" id="about">About</h1>
+            <p className="about_description">All about me! <a href="assets/resume.pdf" target="_blank">Here</a> is a link to my resume if you would like to see it</p>
             <div className="about_all">
                 <div className="about_pairs">
                     <InfoCard

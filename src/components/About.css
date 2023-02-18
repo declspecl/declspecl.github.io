@@ -9,7 +9,21 @@
     text-align: center;
     color: #d0d0d0;
     font-size: 3rem;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 1.25rem 0;
+}
+
+.about_description
+{
+    text-align: center;
+    color: #d0d0d0;
+    font-size: 1.25rem;
+    margin: 0 0 2rem 0;
+}
+
+.about_description a
+{
+    text-decoration: underline;
+    color: #789aff;
 }
 
 .about_all
