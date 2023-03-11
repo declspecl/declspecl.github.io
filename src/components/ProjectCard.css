@@ -2,7 +2,7 @@
 {
     position: relative;
     width: 45vw;
-    height: 325px;
+    height: 350px;
 
     overflow: hidden;
 
@@ -11,7 +11,7 @@
     border: 1px solid #78a9ff;
     border-radius: 0.25rem;
 
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #111111;
     color: #d0d0d0;
 }
@@ -78,9 +78,11 @@
 .project_description
 {
     flex-grow: 1;
+    padding: 0.5rem;
     width: 100%;
-    text-align: center;
     font-size: 1.25rem;
+
+    white-space: pre-wrap;
 }
 
 .project_hoverdata_button_container
@@ -99,6 +101,7 @@
     padding: 5px 30px;
     border-radius: 1rem;
     text-decoration: none;
+    text-align: center;
     color: #111111;
     font-size: 1.25rem;
     font-weight: 500;
@@ -129,16 +132,58 @@
     top: 0;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 1350px)
 {
     .project_container
     {
         width: 80vw;
         height: 400px;
     }
+}
 
+@media only screen and (max-width: 1150px)
+{
+    .project_container
+    {
+        width: 80vw;
+        height: 425px;
+    }
+}
+
+@media only screen and (max-width: 750px)
+{
     .project_description
     {
         font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .project_hoverdata_button_container > a
+    {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 475px)
+{
+    .project_container
+    {
+        height: 500px;
+    }
+
+    .project_hoverdata_button_container > a
+    {
+        padding: 5px 5px;
+    }
+}
+
+@media only screen and (max-width: 375px)
+{
+    .project_container
+    {
+        height: 550px;
     }
 }

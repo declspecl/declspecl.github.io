@@ -5,11 +5,11 @@
     justify-content: space-around;
 }
 
-.skill_container img
+.skill_icon
 {
+    display: block;
     aspect-ratio: 1 / 1;
     flex-grow: 1;
-    width: 0;
     max-width: 33.33%;
     transform: scale(65%);
 }

@@ -1,23 +1,22 @@
 .skill_group
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    width: 30%
 }
 
 .skill_group_title
 {
     color: #fac898;
-    font-size: 3.5rem;
-    font-family: 'Quicksand', sans-serif;
-    width: 40%;
+    font-size: 2.25rem;
+    font-family: 'Inter', sans-serif;
     text-align: center;
 }
 
 .skil_group_icon_group
 {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,33 +24,15 @@
     position: relative;
 }
 
-@media only screen and (max-width: 1000px)
-{
-    .skill_group_title
-    {
-        font-size: 3rem;
-    }
-}
-
-@media only screen and (max-width: 700px)
+@media only screen and (max-width: 850px)
 {
     .skill_group
     {
         flex-direction: column !important;
     }
 
-    .skill_group_title
-    {
-        font-size: 2rem;
-    }
-
-    /* .skill_group_title
-    {
-        margin-bottom: 10px;
-    } */
-
     .skil_group_icon_group
     {
-        width: 90%;
+        width: 80%;
     }
 }
