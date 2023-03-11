@@ -41,6 +41,11 @@
         flex-direction: column;
     }
 
+    .projects_card_rows > .project_container
+    {
+        width: 90%;
+    }
+
     .projects_card_rows:not(:last-child)
     {
         margin-bottom: 10px;

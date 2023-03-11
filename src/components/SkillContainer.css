@@ -24,15 +24,18 @@
     position: relative;
 }
 
-@media only screen and (max-width: 850px)
+@media only screen and (max-width: 1000px)
 {
-    .skill_group
-    {
-        flex-direction: column !important;
-    }
-
     .skil_group_icon_group
     {
-        width: 80%;
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 850px)
+{
+    .skil_group_icon_group
+    {
+        width: 75%;
     }
 }

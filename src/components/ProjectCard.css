@@ -132,11 +132,10 @@
     top: 0;
 }
 
-@media only screen and (max-width: 1350px)
+@media only screen and (max-width: 1450px)
 {
     .project_container
     {
-        width: 80vw;
         height: 400px;
     }
 }
@@ -145,8 +144,15 @@
 {
     .project_container
     {
-        width: 80vw;
-        height: 425px;
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .project_container
+    {
+        height: 475px;
     }
 }
 
