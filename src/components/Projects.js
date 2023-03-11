@@ -61,7 +61,7 @@ const Projects = () =>
                 <ProjectCard
                         baseimage="micrograd.jpg"
                         title="Micrograd"
-                        description={"\tMicrograd is a small autograd and neural network engine that supports backpropagation. I made it when watching Andrej Karpathy's neural network series and implemented it in C++ instead of Python. It was really challenging supoprting the same logic in a language witout a garbage collector but it taught me a TON about machine learning and was super fun!\n\n\tTechnologies used: I used vanilla C++ for the whole project, as it is a command line project just to test my knowledge about neural networks."}
+                        description={"\tMicrograd is a small autograd and neural network engine that supports backpropagation. I made it when watching Andrej Karpathy's neural network series and implemented it in C++ instead of Python. It was really challenging supporting the same logic in a language without a garbage collector, but it taught me a TON about machine learning and was super fun!\n\n\tTechnologies used: I used vanilla C++ for the whole project, as it is a command line project just to test my knowledge about neural networks."}
                         repolink="https://github.com/declspecl/micrograd"
                     />
                     <ProjectCard
