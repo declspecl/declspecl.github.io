@@ -1,10 +1,45 @@
+import { useEffect, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import './Projects.css'
 
 const Projects = () =>
 {
+    const sectionRef = useRef(null);
+
+    const [visible, setVisible] = useState(false);
+
+    const callbackFunction = (entries) =>
+    {
+        setVisible(entries[0].isIntersecting);
+    }
+    
+    const options =
+    {
+        root: null,
+        rootMargin: "0px",
+        threshhold: 1.0
+    };
+
+    useEffect(() =>
+    {
+        const observer = new IntersectionObserver(callbackFunction, options);
+        
+        if (sectionRef.current)
+        {
+            observer.observe(sectionRef.current);
+        }
+
+        return () =>
+        {
+            if (sectionRef.current)
+            {
+                observer.unobserve(sectionRef.current);
+            }
+        }
+    }, [sectionRef, options])
+
     return (
-        <section className="projects">
+        <section className={(visible) ? "projects observed_section visible" : "projects observed_section"} ref={sectionRef}>
             <h1 className="projects_title" id="projects">Projects</h1>
             <div className="projects_cards_all">
                 <div className="projects_card_rows">

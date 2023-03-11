@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import './Contact.css'
 
 const open_new_email = () =>
@@ -34,8 +35,42 @@ const open_new_email = () =>
 
 const Contact = () =>
 {
+    const sectionRef = useRef(null);
+
+    const [visible, setVisible] = useState(false);
+
+    const callbackFunction = (entries) =>
+    {
+        setVisible(entries[0].isIntersecting);
+    }
+    
+    const options =
+    {
+        root: null,
+        rootMargin: "0px",
+        threshhold: 1.0
+    };
+
+    useEffect(() =>
+    {
+        const observer = new IntersectionObserver(callbackFunction, options);
+        
+        if (sectionRef.current)
+        {
+            observer.observe(sectionRef.current);
+        }
+
+        return () =>
+        {
+            if (sectionRef.current)
+            {
+                observer.unobserve(sectionRef.current);
+            }
+        }
+    }, [sectionRef, options])
+
     return (
-        <section className="contact_me" id="contact_me">
+        <section className={(visible) ? "contact_me observed_section visible" : "contact_me observed_section"} ref={sectionRef} id="contact_me">
             <h1 className="contact_me_title">Contact me</h1>
             <div className="contact_me_form">
                 <input type="text" id="contact_me_subject" placeholder="Subject" />

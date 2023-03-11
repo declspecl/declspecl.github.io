@@ -2,11 +2,46 @@ import SkillContainer from './SkillContainer';
 import IconGroup3 from './IconGroup3';
 
 import './Skills.css'
+import { useEffect, useRef, useState } from 'react';
 
 const Skills = () =>
 {
+    const sectionRef = useRef(null);
+
+    const [visible, setVisible] = useState(false);
+
+    const callbackFunction = (entries) =>
+    {
+        setVisible(entries[0].isIntersecting);
+    }
+    
+    const options =
+    {
+        root: null,
+        rootMargin: "0px",
+        threshhold: 1.0
+    };
+
+    useEffect(() =>
+    {
+        const observer = new IntersectionObserver(callbackFunction, options);
+        
+        if (sectionRef.current)
+        {
+            observer.observe(sectionRef.current);
+        }
+
+        return () =>
+        {
+            if (sectionRef.current)
+            {
+                observer.unobserve(sectionRef.current);
+            }
+        }
+    }, [sectionRef, options])
+
     return (
-        <section className="skills">
+        <section className={(visible) ? "skills observed_section visible" : "skills observed_section"} ref={sectionRef}>
             <h1 className="skills_title" id="skills">Skills</h1>
             <div className="skill_containers">
                 <SkillContainer skill_title="Low Level">

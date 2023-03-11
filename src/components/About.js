@@ -1,11 +1,46 @@
 import InfoCard from './InfoCard'
 
 import './About.css'
+import { useEffect, useRef, useState } from 'react';
 
 const About = () =>
 {
+    const sectionRef = useRef(null);
+
+    const [visible, setVisible] = useState(false);
+
+    const callbackFunction = (entries) =>
+    {
+        setVisible(entries[0].isIntersecting);
+    }
+    
+    const options =
+    {
+        root: null,
+        rootMargin: "0px",
+        threshhold: 1.0
+    };
+
+    useEffect(() =>
+    {
+        const observer = new IntersectionObserver(callbackFunction, options);
+        
+        if (sectionRef.current)
+        {
+            observer.observe(sectionRef.current);
+        }
+
+        return () =>
+        {
+            if (sectionRef.current)
+            {
+                observer.unobserve(sectionRef.current);
+            }
+        }
+    }, [sectionRef, options])
+
     return (
-        <section className="about">
+        <section className={(visible) ? "about observed_section visible" : "about observed_section" } ref={sectionRef}>
             <h1 className="about_title" id="about">About</h1>
             <p className="about_description">All about me! <a href="assets/resume.pdf" target="_blank">Here</a> is a link to my resume if you would like to see it</p>
             <div className="about_all">

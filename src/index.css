@@ -11,3 +11,23 @@ body
 {
 	background-color: #161616;
 }
+
+.observed_section
+{
+	transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.75s;
+}
+
+.observed_section
+{
+	transform: translateX(-10%) translateY(5%);
+}
+
+#contact_me
+{
+	transform: translateX(-10%) translateY(7.5%);
+}
+
+.visible
+{
+    transform: translateX(0%) translateY(0%) !important;
+}
